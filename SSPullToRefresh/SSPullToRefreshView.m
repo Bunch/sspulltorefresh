@@ -324,6 +324,10 @@
 		}
 		return;
 	}
+    
+    if (_state == SSPullToRefreshViewStateNormal) {
+        [self _setPullProgress:-y / _expandedHeight];
+    }
 	
 	// If the scroll view isn't ready, we're not interested
 	if (_state != SSPullToRefreshViewStateReady) {
