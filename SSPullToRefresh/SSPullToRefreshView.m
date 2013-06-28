@@ -320,6 +320,7 @@
 		// Scroll view is loading
 		} else if (_state == SSPullToRefreshViewStateLoading) {
 			[self _setContentInsetTop:_expandedHeight];
+            [self.scrollView setContentOffset:CGPointMake(0, -60.0f) animated:NO];
 		}
 		return;
 	}
